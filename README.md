@@ -39,6 +39,8 @@ Our experiments demonstrate the following:
 
 
 ## Getting Started
+We rely on unsloth for training and vLLm for evaluation.
+
 ```
 pip install -r requirements.txt
 ```
