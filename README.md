@@ -49,7 +49,6 @@ Refer to [training documentation](training/README.md) for explanations on:
 
 - Fine-tuning with Synthetic CoT Data.  
 - GRPO implementation for reinforcement learning.  
-- Supported models: LLaMA-8B (distilled), Qwen-2.5-7B, Qwen-2.5-14B.  
 
 ## Evaluation
 
