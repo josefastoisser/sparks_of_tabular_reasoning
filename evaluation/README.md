@@ -2,7 +2,7 @@
 
 This is a reusable and easy-to-reproduce evals as seen in the paper.
 
-## Get started
+## Gettinh started
 
 First, download the CRT-QA and BIRD minidev data from:
 
@@ -10,9 +10,6 @@ First, download the CRT-QA and BIRD minidev data from:
 - https://bird-bench.github.io/
 
 and put them into the 'data' folder.
-
-We rely on LangChain and vLLM for interacting with our models.
-
 
 Here we show how to run evals for Qwen/Qwen2.5-14B-Instruct model. After installing, you can run the serving script which log to `output.log`:
 
