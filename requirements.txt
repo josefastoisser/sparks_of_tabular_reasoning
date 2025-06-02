@@ -7,8 +7,15 @@ tqdm
 pyarrow
 openai
 langchain
-langchain-openai
-langchain-community
+langchain_community
 pydantic
 func_timeout
 vllm
+argparse
+wandb
+unsloth
+trl
+pandas
+langchain_openai
+sqlglot
+pydantic
