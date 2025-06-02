@@ -51,10 +51,6 @@ Refer to [training documentation](training/README.md) for explanations on:
 - GRPO implementation for reinforcement learning.  
 - Supported models: LLaMA-8B (distilled), Qwen-2.5-7B, Qwen-2.5-14B.  
 
-To start training:
-```bash
-python training/train.py
-```
 ## Evaluation
 
 The evaluation pipeline supports the following tasks:  
@@ -64,10 +60,6 @@ The evaluation pipeline supports the following tasks:
 
 Refer to [evaluation documentation](evaluation/README.md).  
 
-To evaluate a model:
-```bash
-python evaluate.py --model_path <path_to_checkpoint> --task <task_name>
-```
 ## Citation 
 
 ```bibtex
