@@ -13,9 +13,6 @@ and put them into the 'data' folder.
 
 We rely on LangChain and vLLM for interacting with our models.
 
-```
-pip install -r requirements.txt
-```
 
 Here we show how to run evals for Qwen/Qwen2.5-14B-Instruct model. After installing, you can run the serving script which log to `output.log`:
 
