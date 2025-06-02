@@ -23,7 +23,7 @@ def parse_args():
     parser.add_argument('--dtype', type=str, default=None)
     parser.add_argument('--load_in_4bit', type=bool, default=True)
     parser.add_argument('--reward_func', type=str, nargs='+', default=["component_matching_reward"])
-    parser.add_argument('--model_name_or_path', type=str, default="unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit")
+    parser.add_argument('--model_name', type=str, default="unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit")
     parser.add_argument('--lora_rank', type=int, default=16)
     parser.add_argument('--lr_scheduler_type', type=str, default='cosine')
     parser.add_argument('--num_generations', type=int, default=6)
@@ -39,7 +39,7 @@ def parse_args():
 args = parse_args()
 
 reward_names = args.reward_func if len(args.reward_func) < 4 else '4_rewards'
-wandb_name = f"{args.model_name_or_path.replace('/', '_')}_{'_'.join(reward_names)}_{args.learning_rate}_{args.gradient_accumulation_steps}_{args.per_device_train_batch_size}_{args.lr_scheduler_type}_{'_'.join(map(str, args.reward_weights))}"
+wandb_name = f"{args.model_name.replace('/', '_')}_{'_'.join(reward_names)}_{args.learning_rate}_{args.gradient_accumulation_steps}_{args.per_device_train_batch_size}_{args.lr_scheduler_type}_{'_'.join(map(str, args.reward_weights))}"
 wandb_name = wandb_name.lower().replace(' ', '_')
 
 wandb.login(key='03b3196c40f85ed8606045a7bdcad9668c7fa11e')
@@ -49,7 +49,7 @@ wandb.init(
 )
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name=args.model_name_or_path,
+    model_name=args.model_name,
     max_seq_length=args.max_seq_length,
     dtype=args.dtype,
     load_in_4bit=args.load_in_4bit,
@@ -83,7 +83,7 @@ Write a SQLite query for the following task: {}.
 
 ### Response:"""
 
-if 'llama' in args.model_name_or_path.lower():
+if 'llama' in args.model_name.lower():
     sql_prompt="""You are a SQLite expert. Given an input question, create a syntactically correct SQLite query to run. Enclose the final sql query within "```sql" and "```" tags. 
     Here is the relevant table info: {table_info}.
     Write a SQLite query for the following task: {question}.
