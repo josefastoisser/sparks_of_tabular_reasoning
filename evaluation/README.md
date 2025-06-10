@@ -11,7 +11,7 @@ First, download the CRT-QA and BIRD minidev data from:
 
 and put them into the 'data' folder.
 
-Here we show how to run evals for Qwen/Qwen2.5-14B-Instruct model. After installing, you can run the serving script which log to `output.log`:
+Then run the model serving script which log to `output.log`:
 
 ```
 HF_TOKEN=xyz sh serve_vllm.sh
