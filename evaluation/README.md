@@ -1,4 +1,4 @@
-# Evals
+# Evaluation
 
 This is a reusable and easy-to-reproduce evals as seen in the paper.
 
