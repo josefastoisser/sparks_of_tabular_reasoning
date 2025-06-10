@@ -31,7 +31,7 @@ export JUDGE_BASE_URL=xyz (OpenAI url)
 We have implemented extensive evaluations. Here are the CLI options to choose from:
 
 ```
-usage: Universal evaluation harness [-h] --task {bird,clinton,crt_qa,tablebench} --model_path MODEL_PATH [--judge_model JUDGE_MODEL] [--workers WORKERS] [--base_dir BASE_DIR]
+usage: run_eval.py --task {bird,clinton,crt_qa,tablebench} --model_path MODEL_PATH [--judge_model JUDGE_MODEL] [--workers WORKERS] [--base_dir BASE_DIR]
 
 options:
   --task {bird,clinton,crt_qa,tablebench}
@@ -48,23 +48,23 @@ options:
 Bird:
 
 ```
-python run_eval.py --task bird --model_path Qwen/Qwen2.5-14B-Instruct
+python run_eval.py --task bird --model_path /path/to/model
 ```
 
 Clinton:
 
 ```
-python run_eval.py --task clinton --model_path Qwen/Qwen2.5-14B-Instruct --judge_model openai_o3_mini
+python run_eval.py --task clinton --model_path /path/to/model --judge_model /path/to/judge_model
 ```
 
 CRT QA:
 
 ```
-python run_eval.py --task crt_qa --model_path Qwen/Qwen2.5-14B-Instruct
+python run_eval.py --task crt_qa --model_path /path/to/model
 ```
 
 TableBench:
 
 ```
-python run_eval.py --task tablebench --model_path Qwen/Qwen2.5-14B-Instruct
+python run_eval.py --task tablebench --model_path /path/to/model
 ```
