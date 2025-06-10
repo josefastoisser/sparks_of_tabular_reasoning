@@ -2,7 +2,7 @@
 
 This is a reusable and easy-to-reproduce evals as seen in the paper.
 
-## Gettinh started
+## Getting started
 
 First, download the CRT-QA and BIRD minidev data from:
 
