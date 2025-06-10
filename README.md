@@ -16,7 +16,7 @@ This work reframes the Text-to-SQL task as a pathway for teaching large language
 2. **Reinforcement Learning via GRPO**:  
    We introduce a Group Relative Policy Optimization (GRPO) method that connects SQL execution accuracy to generalizable reasoning by encouraging steps that transfer across datasets and logic structures, rather than overfitting to task-specific syntax.
 
-![intro figure](figure/intro_figure.png)
+![intro figure](Figure_1_final.jpg)
 
 
 ## Empirical Results
@@ -35,11 +35,9 @@ Our experiments demonstrate the following:
 
 ---
 
-![results figure](figure/results_figure.png)
-
 
 ## Getting Started
-We rely on unsloth for training and vLLm for evaluation.
+We rely on unsloth for training and vllm for evaluation.
 
 ```
 pip install -r requirements.txt
